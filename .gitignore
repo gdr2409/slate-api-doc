@@ -1,27 +1,35 @@
-*.gem
-*.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
-*.DS_STORE
-build/
-.cache
-.vagrant
-.sass-cache
+slate-app/*.gem
+slate-app/*.rbc
+slate-app/.bundle
+slate-app/.config
+slate-app/coverage
+slate-app/InstalledFiles
+slate-app/lib/bundler/man
+slate-app/pkg
+slate-app/rdoc
+slate-app/spec/reports
+slate-app/test/tmp
+slate-app/test/version_tmp
+slate-app/tmp
+slate-app/*.DS_STORE
+slate-app/build/
+slate-app/.cache
+slate-app/.vagrant
+slate-app/.sass-cache
+
 
 # YARD artifacts
-.yardoc
-_yardoc
-doc/
-.idea/
+slate-app/.yardoc
+slate-app/_yardoc
+slate-app/doc/
+slate-app/.idea/
 
-# Vagrant artifacts
-ubuntu-*-console.log
+slate-app/# Vagrant artifacts
+slate-app/ubuntu-*-console.log
+
+node_modules
+slate-app/build
+server/application-config.js
+server/aws-config.json
+
+package-lock.json

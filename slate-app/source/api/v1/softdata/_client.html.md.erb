@@ -1,0 +1,303 @@
+# Client Softdata
+
+## Create/ Update Consignment
+
+> Request Payload
+
+```json
+
+{
+	"consignments": [
+		{
+			"customer_code": "SHIPSY",
+			"reference_number": "E12345678",
+			"service_type_id": "PREMIUM",
+			"load_type": "DOCUMENT",
+			"description": "Notebook",
+			"cod_favor_of": "Ram Manohar",
+			"cod_collection_mode": "Cheque",
+			"dimension_unit": "",
+			"length": "",
+			"width": "",
+			"height": "",
+			"weight_unit": "kg",
+			"weight": "0.25",
+			"declared_value": "",
+			"cod_amount": "100",
+			"num_pieces": "10",
+			"customer_reference_number": "XF878723",
+			"is_risk_surcharge_applicable": true,
+			"courier_partner": "",
+			"courier_partner_reference_number": "",
+			"origin_details": {
+				"name": "Shipsy",
+				"phone": "9971149561‬",
+				"alternate_phone": "9876543210",
+				"address_line_1": "B-23 Sushant Lok I",
+				"address_line_2": "Opp. Bestech Centre Point Mall",
+				"pincode": "122009",
+				"city": "Gurgaon",
+				"state": "Haryana"
+			},
+			"destination_details": {
+				"name": "Shipsy",
+				"phone": "9971149561",
+				"alternate_phone": "9876543210",
+				"address_line_1": "B-23 Sushant Lok I",
+				"address_line_2": "Opp. Bestech Centre Point Mall",
+				"pincode": "122009",
+				"city": "Gurgaon",
+				"state": "Haryana"
+			},
+			"return_details": {
+				"name": "Shipsy",
+				"phone": "9971149561",
+				"alternate_phone": "9876543210",
+				"address_line_1": "B-23 Sushant Lok I",
+				"address_line_2": "Opp. Bestech Centre Point Mall",
+				"pincode": "122009",
+				"city": "Gurgaon",
+				"state": "Haryana"
+			},
+			"exceptional_return_details": {
+				"name": "Shipsy",
+				"phone": "9971149561",
+				"alternate_phone": "9876543210",
+				"address_line_1": "B-23 Sushant Lok I",
+				"address_line_2": "Opp. Bestech Centre Point Mall",
+				"pincode": "122009",
+				"city": "Gurgaon",
+				"state": "Haryana"
+			},
+			“type_of_delivery”: “home delivery”,
+			"hub_code": "GGN",
+			"store_hub_code": "GGN002",
+			"action_type": "delivery",
+			"pieces_detail": [
+				{ 
+					"description": "Notebook",
+					"declared_value": "100",
+					"weight": "0.5",
+					"height": "5",
+					"length": "5",
+					"width" : "5",
+					"quantity" : "1",
+					"product_code" : "000000000581109917",
+					"volume" : "427731200.000",
+					"volume_unit" : "MMQ",
+					"dimension_unit" : "cm",
+					"weight_unit" : "kg"
+				},
+				{
+					"description": "letter",
+					"declared_value": "100",
+					"weight": "0.5",
+					"height": "5",
+					"length": "5",
+					"width" : "5",
+					"product_code" : "000000000581109917",
+					"volume" : "427731200.000",
+					"volume_unit" : "MMQ",
+					"dimension_unit" : "cm",
+					"weight_unit" : "kg"
+				}
+			]
+		},
+		{
+			"customer_code": "SHIPSY",
+			"reference_number": "E12345679",
+			"service_type_id": "PREMIUM",
+			"load_type": "DOCUMENT",
+			"description": "Notebook",
+			"cod_favor_of": "Ram Manohar",
+			"cod_collection_mode": "Cheque",
+			"dimension_unit": "",
+			"length": "",
+			"width": "",
+			"height": "",
+			"weight_unit": "kg",
+			"weight": "0.25",
+			"declared_value": "",
+			"cod_amount": "100",
+			"num_pieces": "10",
+			"customer_reference_number": "XF878723",
+			"is_risk_surcharge_applicable": true,
+			"courier_partner": "",
+			"courier_partner_reference_number": "",
+			"origin_details": {
+				"name": "Shipsy",
+				"phone": "9971149561‬",
+				"alternate_phone": "9876543210",
+				"address_line_1": "B-23 Sushant Lok I",
+				"address_line_2": "Opp. Bestech Centre Point Mall",
+				"pincode": "122009",
+				"city": "Gurgaon",
+				"state": "Haryana"
+			},
+			"destination_details": {
+				"name": "Shipsy",
+				"phone": "9971149561",
+				"alternate_phone": "9876543210",
+				"address_line_1": "B-23 Sushant Lok I",
+				"address_line_2": "Opp. Bestech Centre Point Mall",
+				"pincode": "122009",
+				"city": "Gurgaon",
+				"state": "Haryana"
+			},
+			"return_details": {
+				"name": "Shipsy",
+				"phone": "9971149561",
+				"alternate_phone": "9876543210",
+				"address_line_1": "B-23 Sushant Lok I",
+				"address_line_2": "Opp. Bestech Centre Point Mall",
+				"pincode": "122009",
+				"city": "Gurgaon",
+				"state": "Haryana"
+			},
+			"exceptional_return_details": {
+				"name": "Shipsy",
+				"phone": "9971149561",
+				"alternate_phone": "9876543210",
+				"address_line_1": "B-23 Sushant Lok I",
+				"address_line_2": "Opp. Bestech Centre Point Mall",
+				"pincode": "122009",
+				"city": "Gurgaon",
+				"state": "Haryana"
+			},
+			“type_of_delivery”: “home delivery”,
+			"hub_code": "GGN",
+			"store_hub_code": "GGN002",
+			"action_type": "delivery"
+		}
+	]
+```
+### Request Information
+
+| Category | Value                                                         |
+|----------|---------------------------------------------------------------|
+| Method   | `POST`                                                        |
+| Url      | `{baseurl}/api/client/integration/consignment/upload/softdata`|
+
+### Headers
+| Key           | Value             |
+|---------------|-------------------|
+| Authorization | `Basic <API KEY>` |
+
+### Input Schema
+
+#### Consignments
+An array of consignment objects, required.
+Following is the description, its data type, whether required or not and possible example for every key of consignment.
+
+| Key Name                                                                                                  | Description                                                                                                                           | Data Type        | Required Key                           | Remarks                                                                                                                                                                                                              |
+|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| customer_code                                                                                             | Customer code                                                                                                                         | String           | Required                               |                                                                                                                                                                                                                      |
+| origin_details                                                                                            | Address object containing origin details of consignment                                                                               | Object           | Required                               | Here, details of the consignor such as name, phone/mobile number, address and pincode needs to be added. Pincode is required in origin details                                                                       |
+| destination_details                                                                                       | Address object containing destination details of consignment                                                                          | Object           | Required                               | Can be an object or null. Here, details of the consignee such as name, phone/mobile number, address and pincode needs to be added.                                                                                   |
+| return_details                                                                                            | Address object containing return details of RTO consignments                                                                          | Object           | Optional                               | Can be an object or null. Here, details of the consignee such as name, phone/mobile number, address and pincode needs to be added.                                                                                   |
+| exceptional_return_details                                                                                | Address object containing return details of RTO consignments                                                                          | Object           | Optional                               | Can be an object or null. Here, details of the consignee such as name, phone/mobile number, address and pincode needs to be added.                                                                                   |
+| load_type                                                                                                 | Consignment type                                                                                                                      | String           | Required                               | Allowed: “DOCUMENT”, “NON-DOCUMENT”                                                                                                                                                                                  |
+| product_code                                                                                              | Product code for predefined product categories. Each product with a given product code will have its predefined dimensions and weight | String           | Optional                               | Load_type should be NON-DOCUMENT for this. If present, dimension and weight values will be overwritten with the product code mapping. No need to provide dimension_unit, length, width, height, weight_unit, weight. |
+| dimension_unit                                                                                            | Unit for dimensions of consignment                                                                                                    | String           | Optional                               | Allowed: “cm”, “in” etc. Default dimension unit is “cm”.                                                                                                                                                             |
+| length                                                                                                    | Length of consignment (cm)                                                                                                            | String or Number | Optional                               | Eg: “1.5” or 1.5                                                                                                                                                                                                     |
+| width                                                                                                     | Width of consignment (cm)                                                                                                             | String or Number | Optional                               | Eg: “1.5” or 1.5                                                                                                                                                                                                     |
+| height                                                                                                    | Height of consignment (cm)                                                                                                            | String or Number | Optional                               | Eg: “1.5” or 1.5                                                                                                                                                                                                     |
+| weight_unit                                                                                               | Unit for consignment weight                                                                                                           | String           | Optional                               | Allowed: “gm”, “kg”. Default weight unit is “kg”                                                                                                                                                                     |
+| weight                                                                                                    | Weight of consignment                                                                                                                 | String or Number | Optional                               | Eg: “1.5” or 1.5                                                                                                                                                                                                     |
+| service_type_id                                                                                           | Service type id of consignment                                                                                                        | String           | Required                               | Eg: “Economy” The services type chosen should be from the list provided by the courier partner.                                                                                                                      |
+| commodity_name                                                                                            | Content name of the consignment                                                                                                       | String           | Mandatory in Non Docs                  | Eg: “Laptop”, “Mobile” etc                                                                                                                                                                                           |
+| reference_number                                                                                          | Reference number/ awb number of consignment                                                                                           | String           | Optional                               | eg: “REF123”                                                                                                                                                                                                         |
+| cod_amount                                                                                                | COD amount to be collected for the consignment under consideration                                                                    | Number or String | Optional                               | Eg: “2800” or 2800                                                                                                                                                                                                   |
+| cod_collection_mode                                                                                       | COD collection mode                                                                                                                   | String           | Optional                               | Allowed: “cash”, “cheque”, “dd”.                                                                                                                                                                                     |
+| cod_favor_of                                                                                              | Details of the entity in whose name collection is to be made                                                                          | string           | Optional                               |                                                                                                                                                                                                                      |
+| declared_value                                                                                            | Declared value of consignment                                                                                                         | Number or String | Required                               | Eg: “2800” or 2800                                                                                                                                                                                                   |
+| type_of_delivery                                                                                          | Home delivery                                                                                                                         | String           | Required                               | Only allowed value is “home delivery”                                                                                                                                                                                |
+| num_pieces                                                                                                | Number of pieces of Consignment                                                                                                       | Number or String | Optional                               | Eg: “10” or 10                                                                                                                                                                                                       |
+| eway_bill                                                                                                 | Eway Bill Number of Consignment                                                                                                       | String           | Optional                               | Eg: “12878382929”                                                                                                                                                                                                    |
+| invoice_number                                                                                            | Invoice Number of Consignment                                                                                                         | String           | Optional                               | Eg: “C3447827878470”                                                                                                                                                                                                 |
+| invoice_date                                                                                              | Invoice Date of Consignment                                                                                                           | String           | Optional                               | Eg: “25 Jul 2018”                                                                                                                                                                                                    |
+| consignment_type                                                                                          | Type of Consignment: Reverse or Forward                                                                                               | String           | Optional                               | ‘forward’ for forward pickup and ‘reverse’ for reverse pickup                                                                                                                                                        |
+| customer_reference_number                                                                                 | Customer reference number                                                                                                             | String           | Optional                               | Eg: “ABCD” or “1234” or “A1234”                                                                                                                                                                                      |
+| is_risk_surcharge_applicable                                                                              | Risk surcharge applicable                                                                                                             | Boolean          | Optional                               | Eg: true or false                                                                                                                                                                                                    |
+| courier_partner                                                                                           | Courier Partner                                                                                                                       | String           | Optional                               |                                                                                                                                                                                                                      |
+| courier_partner_reference_number                                                                          | Courier Partner Reference number                                                                                                      | String           | Optional                               |                                                                                                                                                                                                                      |
+| hub_code                                                                                                  | Manifest Hub Code                                                                                                                     | String           | Optional                               |                                                                                                                                                                                                                      |
+| store_hub_code                                                                                            | Store Hub Code                                                                                                                        | String           | Optional                               |                                                                                                                                                                                                                      |
+| action_type                                                                                               | Manifestation process handling. Allowed types: "delivery", "single_pickup", "inscan"                                                  | String           | Optional                               | Default action_type is “single_pickup”                                                                                                                                                                               |
+
+#### Address Object
+Following is the description, its data type, whether required or not and possible example for every key of Address.
+
+| Key Name        | Description                                                                                   | Type   | Required                                          | Remarks              |
+|-----------------|-----------------------------------------------------------------------------------------------|--------|---------------------------------------------------|----------------------|
+| pincode         | Pincode details of the Consignor (in case of origin) or Consignee (in case of destination)    | String | Required in Origin and Destination                | Eg: “122002”         |
+| name            | Name of consignor (in case of origin) or Consignee (in case of destination)                   | String | Required in Origin and Destination                | Eg: “Nikhil”         |
+| phone           | Phone number of Consignor (in case of origin) or Consignee (in case of destination)           | String | Required in Origin and Destination                | Eg: “8586999698”     |
+| alternate_phone | Alternate Phone number of Consignor (in case of origin) or Consignee (in case of destination) | String | Required in Origin for Non - document consignment | Eg: “8586999698”     |
+| address_line_1  | Address details of the Consignor (in case of origin) or Consignee (in case of destination)    | String | Required in Origin and Destination                | Eg: “Carlton Estate” |
+| address_line_2  | Address details of the Consignor (in case of origin) or Consignee (in case of destination)    | String | Optional                                          | Eg: “Phase 5”        |
+| city            |                                                                                               | String | Optional                                          |                      |
+| state           |                                                                                               | String | Optional                                          |                      |
+
+#### Piece Details Object
+
+Following is the description, its data type, whether required or not and possible example for every key of pieces detail.
+
+| Key Name                     | Description                                                                              | Type             | Required                                    | Remarks                                                  |
+|------------------------------|------------------------------------------------------------------------------------------|------------------|---------------------------------------------|----------------------------------------------------------|
+| description                  | Piece details of the Consignor (in case of origin) or Consignee (in case of destination) | String           | Optional.                                   | Eg: “Notebook”                                           |
+| declared_value               | Declared value of Consignment Piece                                                      | String or Number | Required in pieces_details for NON-DOCUMENT | Eg: “15000”                                              |
+| weight                       | Weight of consignment piece (kg)                                                         | String or Number | Required in pieces_details for NON-DOCUMENT | Eg: “1.5” or 1.5                                         |
+| height                       | Height of consignment piece (cm)                                                         | String or Number | Required in pieces_details for NON-DOCUMENT | Eg: “1.5” or 1.5                                         |
+| length                       | Length of consignment piece (cm)                                                         | String or Number | Required in pieces_details for NON-DOCUMENT | Eg: “1.5” or 1.5                                         |
+| width                        | Width of consignment piece (cm)                                                          | String or Number | Required in pieces_details for NON-DOCUMENT | Eg: “1.5” or 1.5                                         |
+| weight_unit                  | Unit for consignment weight                                                              | String           | Optional                                    | Allowed: “gm”, “kg”. Default weight unit is “kg”                                     |
+| dimension_unit               | Unit for dimensions of consignment                                                       | String           | Optional                                    | Allowed: “cm”, “in” etc. Default dimension unit is “cm”. |
+| volume_unit                  | Unit of volume                                                                           | String           | Optional                                    | Eq: “MMQ”                                                |
+
+
+### Response
+
+| Response Code | Remarks                                                                                                                                                                                                                                                                                                                                                    |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 200           | Each consignment will be processed independently. For each consignment, “success” key will be either true or false. If success is true for a consignment, then the consignment is successfully entered into shipsy system. If success is false, then that consignment is not entered (in case of false, the response contains an error message and reason) |
+| 400           | There is some validation error in the overall request format. In this case, complete request is rejected                                                                                                                                                                                                                                                   |
+| 401           | There is authentication error                                                                                                                                                                                                                                                                                                                              |
+
+#### Sample Response for 200 - I
+
+When response is 200, it means that there is no error in the structure of the request. But there can be validation errors in individual consignments.
+
+
+> Sample response for a request in which two consignments, 'E12345678' and 'E12345679' are sent
+
+```json
+
+{
+	"status": "OK",
+	"data": [
+		{
+			"success": true,
+			"reference_number": "E12345678",
+			"pieces": [
+				{
+					"reference_number": "E12345678001"
+				},
+				{
+					"reference_number": "E12345678002"
+				}
+			]
+		},
+		{
+			"success": true,
+			"reference_number": "E12345679"
+		}
+	]
+}
+
+```
+
+The response means that:
+ - For consignment 'E12345678', there are multiple pieces.
+ - For consignment 'E12345679', there is a single piece.
+
